@@ -5,17 +5,20 @@ import {Context} from "../../appContext"
 function TraditionalPets () {
     const {myPets} = useContext(Context)
     
-    const pictureElements = myPets.map((img) => (
+  const pictureElements = myPets.map((img) => (
          
-         <Petimage key={img} img={img} />
+         <Petimage key={img.id} img={img} /> 
          
          
-     ))
+     )
+    )
      return (
-         <main className="photos">
+         <div className="photos">
              <h1>Images go here</h1>
-           {` /* {pictureElements}*/`}
-         </main>
+             {pictureElements}
+           
+         </div>
+        
      )
 }
 

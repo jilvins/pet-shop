@@ -1,10 +1,13 @@
 import React from "react"
 
 
-function Petimage(img) {
+function Petimage({img}) {
     return (
         <div className="">
-            <img src={img} className="image" alt=""/>
+            <p>{img.name}</p>
+            <img src={img.picture} alt="animal"/>
+            <p>{img.description}</p>
+            <p>{img.price} Euros</p>
         </div>
     )
 }

@@ -1,0 +1,30 @@
+[
+    {
+        "id": "1",
+        "name": "Dog",
+        "price": 10,
+        "picture": "picturesTrad/puppy-1903313_640.jpg",
+        "description": "Loyal dog"
+    },
+    {
+        "id": "2",
+        "name": "Cat",
+        "price": 8,
+        "picture": "/src/picturesTrad/cat-551554_640.jpg",
+        "description": "Cute cat"
+    },
+    {
+        "id": "3",
+        "name": "Hamster",
+        "price": 4,
+        "picture": "/src/picturesTrad/hamster-1772742_640.jpg",
+        "description": "Small hamster"
+    },
+    {
+        "id": "4",
+        "name": "Fish",
+        "price": 2,
+        "picture": "/src/picturesTrad/fairy-wrasse-3975299_640.jpg",
+        "description": "Shining fish"
+    }
+]
