@@ -5,7 +5,7 @@ const Context = React.createContext()
 
 function ContextProvider({children}) {
     const [myPets, setMyPets] = useState([])
-    //const petImages = "./petCatalog.json"
+    const [selectedItems, setSelectedItems] = useState([])
 
     useEffect(() => {
         fetch('data.json' , {
@@ -21,10 +21,15 @@ function ContextProvider({children}) {
             .catch((err) => {console.error(err) });
                 
     }, [])
-    console.log(myPets)
+    
+    function addToCart(newCart) {
+        
+        setSelectedItems(prevCart => [...prevCart, newCart])
+        console.log(selectedItems)
+    }
     
     return (
-        <Context.Provider value={{myPets}}>
+        <Context.Provider value={{myPets, addToCart, selectedItems}}>
             {children}
         </Context.Provider>
     )

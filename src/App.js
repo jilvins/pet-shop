@@ -6,6 +6,7 @@ import Footer from "./components/footer"
 import InfoPage from "./components/pages/infoPage"
 import TraditionalPets from "./components/pages/traditionalPets"
 import ExoticPets from "./components/pages/exoticPets"
+import ShoppingList from "./components/pages/shoppingList"
 
 import {Switch, Route} from "react-router-dom"
 
@@ -22,8 +23,11 @@ function App() {
         <Route path="/tradpets">
           <TraditionalPets />
         </Route>
-        <Route>
-          <ExoticPets path="/exopets"/>
+        <Route path="/exopets">
+          <ExoticPets />
+        </Route>
+        <Route path="/shoplist">
+          <ShoppingList />
         </Route>
 
 

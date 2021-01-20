@@ -13,8 +13,8 @@ function TraditionalPets () {
      )
     )
      return (
-         <div className="photos">
-             <h1>Images go here</h1>
+         <div className="petGallery">
+            
              {pictureElements}
            
          </div>
