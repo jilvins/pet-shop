@@ -83,6 +83,9 @@ a {
   border: 2px solid black;
   background-color: sandybrown;
 }
+.cartContainer {
+  display: flex;
+}
 .petInfoSection {
   border: 2px solid black;
 }

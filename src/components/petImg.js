@@ -2,9 +2,11 @@ import React, {useState, useContext} from "react"
 import {Context} from "../appContext"
 
 
+
 function Petimage({img}) {
-    const [isHovered, setIsHovered] = useState(false)
-    const {addToCart} = useContext(Context)
+    const [isClicked, setIsClicked] = useState(false)
+    const {addToCart, selectedItems} = useContext(Context)
+    const alreadyInCart = selectedItems.some(item => item.id === img.id)
     return (
         <div className="petContainer">
             <h4>{img.name}</h4>
@@ -13,12 +15,15 @@ function Petimage({img}) {
             <p>{img.description}</p>
             <p>{img.price} Euros</p>
             <button
-            onClick={()=> {setIsHovered(!isHovered); addToCart(img)}}
-            >
-                {isHovered? "cancel" : "Buy"}
+            onClick={()=> {setIsClicked(isClicked); addToCart(img)}}
+            style={{ display: alreadyInCart ? "none" : "block" }}>
+                Buy
+            </button>
+            <button style={{ display: alreadyInCart ? "block" : "none" }}>
+                Order taken
             </button>
             </div>
-            {isHovered ? console.log("About to buy?") : console.log("Dont want to buy")}
+            {isClicked ? console.log("About to buy?") : console.log("Dont want to buy")}
         </div>
     )
 }
