@@ -1,14 +1,7 @@
 .App {
   text-align: center;
   position: relative;
-}
-
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  padding-bottom: 0;
 }
 
 header {
@@ -29,15 +22,18 @@ header {
   flex-wrap: wrap;
   gap: 2em;
 }
+main {
+  margin-bottom: 20px;
+}
 
 footer {
   background-color: lightgrey;
   color: #282c34;
-  position:fixed;
-  bottom:0;
   width: 100%;
-  
-  
+  bottom: 0;
+  margin-top: 60px;
+  bottom: 0px;
+   
 }
 a {
   color: #FFF;
@@ -46,15 +42,6 @@ a:hover {
    color: lightblue;
 }
 
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .info {
   background-color: greenyellow;
@@ -79,13 +66,46 @@ a {
     justify-content: center;
     margin-bottom:100px
 }
-.petContainer {
-  border: 2px solid black;
-  background-color: sandybrown;
+.cartGallery {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
 }
+
+.petContainer {
+  
+  background-color: sandybrown;
+  padding-bottom: 10px;
+}
+
+.petInfoSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.petInfoSection button {
+  color: #FFF;
+  background-color: darkorange;
+  align-self: center;
+  width: 100px;
+  margin-bottom: 5px;
+
+}
+
 .cartContainer {
   display: flex;
 }
 .petInfoSection {
   border: 2px solid black;
+}
+
+.img {
+  padding: 10px;
+  color: antiquewhite;
+  background-color: blue;
+}
+.hidden {
+  display: none;
 }

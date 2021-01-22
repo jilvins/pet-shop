@@ -10,7 +10,6 @@ function SelectedPet({pet}) {
             <p>{pet.price}</p>
             <button onClick={()=> removeFromCart(pet.id)}>Cancel order</button>
 
-            {console.log(pet.description)}
         </div>
     )
 }

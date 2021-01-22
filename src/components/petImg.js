@@ -23,7 +23,6 @@ function Petimage({img}) {
                 Order taken
             </button>
             </div>
-            {isClicked ? console.log("About to buy?") : console.log("Dont want to buy")}
         </div>
     )
 }

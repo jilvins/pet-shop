@@ -1,6 +1,7 @@
 import React, {useContext} from "react"
 import Petimage from "../petImg"
 import {Context} from "../../appContext"
+import Footer from "../footer"
 
 function TraditionalPets () {
     const {myPets} = useContext(Context)
@@ -13,11 +14,14 @@ function TraditionalPets () {
      )
     )
      return (
-         <div className="petGallery">
+         <>
+         <div className="petGallery main">
             
              {pictureElements}
            
          </div>
+         <Footer />
+         </>
         
      )
 }

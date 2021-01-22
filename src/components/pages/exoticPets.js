@@ -1,9 +1,28 @@
-import React from "react"
+import React, {useContext} from "react"
+import Petimage from "../petImg"
+import {Context} from "../../appContext"
+import Footer from "../footer"
 
 function ExoticPets () {
-    return (
-        <h2>Selection of exotic pets</h2>
+    const {myExoticPets} = useContext(Context)
+    
+  const pictureElements = myExoticPets.map((img) => (
+         
+         <Petimage key={img.id} img={img} /> 
+             
+     )
     )
+     return (
+         <>
+         <div className="petGallery main">
+            
+             {pictureElements}
+           
+         </div>
+         <Footer />
+         </>
+        
+     )
 }
 
 export default ExoticPets

@@ -1,25 +1,49 @@
-import React, {useContext} from "react"
+import React, {useContext, useState} from "react"
 import {Context} from "../../appContext"
 import SelectedPet from "../selectedPet"
+import Footer from "../footer"
 
 function ShoppingList () {
-    const {selectedItems} = useContext(Context)
-    const totalAmount = selectedItems.length> 1 ? selectedItems.map(item => item.price).reduce((a,b) => a + b) : 0
+    const {selectedItems, emptyList} = useContext(Context)
+    const totalAmount = selectedItems.length> 0 ? selectedItems.map(item => item.price).reduce((a,b) => a + b) : 0
+    const shippingCosts = selectedItems.length* 2
+    const [buttonText, setButtonText] = useState("Complete your order")
+    const [btnText, setBtnText] = useState("Proceed?")
+    const [comleteMessage, setCompleteMessage] = useState("")
+    const [imageClass, setImageClass] = useState("img")
     
     const selectedPetList = selectedItems.map(pet => (
         <SelectedPet key={pet.id} pet={pet} />
     ))
-/*function completeOrder () {
-    console.log("Your total cost, including shipping is" )
-}*/
+function completeOrder () {
+        
+        setImageClass("hidden")
+        setCompleteMessage(`Your total costs are ${totalAmount} € + ${shippingCosts} € for shipping`)  
+        setButtonText("")
+        emptyList()
+    }
+function takeOrder () {
+    setBtnText("Processing...")
+    setTimeout(() => {
+        setBtnText("Order will be delivered in 2 days!")  
+    }, 3000)
+}
 
     return (
-        <div>
+        <>
+        <div className="main">
             <h2>Your selected pet list</h2>
+            <div className="cartGallery">
             {selectedPetList}
-            <p>Ammount to pay: {totalAmount}</p>
-            <button onClick={() => console.log("order placed")}>Complete your order</button>
+            </div>
+            <p>{selectedItems.length> 0 ? `"Ammount to pay:" ${totalAmount}` : null}</p>
+            <p>{comleteMessage}</p>
+            <button className={imageClass} onClick={completeOrder}>{buttonText}</button>
+            <button className={imageClass === "img"? "hidden" : "img"} 
+            onClick={takeOrder}>{btnText}</button>
         </div>
+        <Footer />
+        </>
     )
 }
 
