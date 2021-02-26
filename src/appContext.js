@@ -7,6 +7,7 @@ function ContextProvider({children}) {
     const [myPets, setMyPets] = useState([])
     const [myExoticPets, setMyexoticPets] = useState([])
     const [selectedItems, setSelectedItems] = useState([])
+    const [singlePet, setSinglePet] = useState()
 
     useEffect(() => {
         fetch('data.json' , {

@@ -7,6 +7,7 @@ import TraditionalPets from "./components/pages/traditionalPets"
 import ExoticPets from "./components/pages/exoticPets"
 import ShoppingList from "./components/pages/shoppingList"
 import Footer from "./components/footer"
+import Pet from './components/pages/Pet.js'
 
 import {Switch, Route} from "react-router-dom"
 
@@ -15,8 +16,7 @@ function App() {
     <div className="App">
       <Header />
       <Navbar />
-    
-  
+      <div id="main-content">
       <Switch>
       <Route exact path="/">
           <InfoPage />
@@ -30,8 +30,11 @@ function App() {
         <Route path="/shoplist">
           <ShoppingList />
         </Route>
+        <Route path='/pet/:id' children={<Pet />} />
       </Switch>
-    
+      </div>
+      <Footer />
+      
    
     </div>
   );

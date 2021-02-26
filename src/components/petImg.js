@@ -9,7 +9,6 @@ function Petimage({img}) {
     const alreadyInCart = selectedItems.some(item => item.id === img.id)
     return (
         <div className="petContainer">
-            <h4>{img.name}</h4>
             <img src={img.picture} alt="animal" className="petImg"/>
             <div className="petInfoSection">
             <p>{img.description}</p>

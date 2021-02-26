@@ -7,7 +7,8 @@ function SelectedPet({pet}) {
     return (
         <div className="cartContainer">
             <img src={pet.picture} alt="your selection" className="petImg"/>
-            <p>{pet.price}</p>
+            <p className="sel-pet-name">{pet.name}</p>
+            <p className="sel-pet-price"> Euro: {pet.price}</p>
             <button onClick={()=> removeFromCart(pet.id)}>Cancel order</button>
 
         </div>

@@ -1,7 +1,7 @@
 import React, {useContext, useState} from "react"
 import {Context} from "../../appContext"
 import SelectedPet from "../selectedPet"
-import Footer from "../footer"
+
 
 function ShoppingList () {
     const {selectedItems, emptyList} = useContext(Context)
@@ -36,13 +36,12 @@ function takeOrder () {
             <div className="cartGallery">
             {selectedPetList}
             </div>
-            <p>{selectedItems.length> 0 ? `"Ammount to pay:" ${totalAmount}` : null}</p>
+            <p className="amount-to-pay">{selectedItems.length> 0 ? `Total ammount to pay: ${totalAmount}` : null}</p>
             <p>{comleteMessage}</p>
             <button className={imageClass} onClick={completeOrder}>{buttonText}</button>
             <button className={imageClass === "img"? "hidden" : "img"} 
             onClick={takeOrder}>{btnText}</button>
         </div>
-        <Footer />
         </>
     )
 }
