@@ -4,13 +4,14 @@ import {Context} from "../../appContext"
 
 
 
+
 function ExoticPets () {
-    const {myExoticPets} = useContext(Context)
+    const {allPets} = useContext(Context)
     
-  const pictureElements = myExoticPets.map((img) => (
-    //<Link to={`/pet/${img.id}`} key={img.id}>    
+  const pictureElements = allPets.filter(exotPets => exotPets.type === "exotic").map((img) => (
+      
          <Petimage key={img.id} img={img} /> 
-     // </Link>       
+         
      )
     )
      return (

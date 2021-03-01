@@ -4,36 +4,24 @@ import React, {useState, useEffect} from "react"
 const Context = React.createContext()
 
 function ContextProvider({children}) {
-    const [myPets, setMyPets] = useState([])
-    const [myExoticPets, setMyexoticPets] = useState([])
+    const [allPets, setAllPets] = useState([])
     const [selectedItems, setSelectedItems] = useState([])
-    const [singlePet, setSinglePet] = useState()
-
+    const [singlePet, setSinglePet] = useState(1)
+    
+   
     useEffect(() => {
-        fetch('data.json' , {
+        fetch('allPets.json' , {
             headers : { 
               'Content-Type': 'application/json',
               'Accept': 'application/json'
              }
           })
             .then(res => res.json())
-            .then(data => setMyPets(data))
+            .then(data => setAllPets(data))
             .catch((err) => {console.error(err) });
                 
     }, [])
-
-    useEffect(() => {
-        fetch('exoticPets.json' , {
-            headers : { 
-              'Content-Type': 'application/json',
-              'Accept': 'application/json'
-             }
-          })
-            .then(res => res.json())
-            .then(data => setMyexoticPets(data))
-            .catch((err) => {console.error(err) });
-                
-    }, [])
+    
     
     function addToCart(newCart) {
         
@@ -48,7 +36,7 @@ function ContextProvider({children}) {
     }
     
     return (
-        <Context.Provider value={{myPets, myExoticPets, selectedItems, addToCart, removeFromCart, emptyList }}>
+        <Context.Provider value={{allPets, selectedItems, singlePet, setSinglePet, addToCart, removeFromCart, emptyList }}>
             {children}
         </Context.Provider>
     )

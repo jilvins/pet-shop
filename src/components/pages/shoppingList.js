@@ -32,7 +32,8 @@ function takeOrder () {
     return (
         <>
         <div className="main">
-            <h2>Your selected pet list</h2>
+            {selectedItems.length === 0 ? "You have not ordered anything yet" :
+           <> <h2>Your selected pet list</h2>
             <div className="cartGallery">
             {selectedPetList}
             </div>
@@ -41,6 +42,7 @@ function takeOrder () {
             <button className={imageClass} onClick={completeOrder}>{buttonText}</button>
             <button className={imageClass === "img"? "hidden" : "img"} 
             onClick={takeOrder}>{btnText}</button>
+        </> }
         </div>
         </>
     )

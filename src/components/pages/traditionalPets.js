@@ -4,9 +4,9 @@ import {Context} from "../../appContext"
 
 
 function TraditionalPets () {
-    const {myPets} = useContext(Context)
+    const {allPets} = useContext(Context)
     
-  const pictureElements = myPets.map((img) => (
+  const pictureElements = allPets.filter(tradPets => tradPets.type === "simple").map((img) => (
          
          <Petimage key={img.id} img={img} /> 
          
