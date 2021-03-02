@@ -7,7 +7,6 @@ function InfoPage () {
         <>
         <div className="info-main">
         <img src={ShopImg} alt="pet shop" className="main-img"/>
-        <h2 className="main-img-text"></h2>
         </div>
         </>
     )

@@ -37,12 +37,13 @@ function takeOrder () {
             <div className="cartGallery">
             {selectedPetList}
             </div>
+            </> }
             <p className="amount-to-pay">{selectedItems.length> 0 ? `Total ammount to pay: ${totalAmount}` : null}</p>
             <p>{comleteMessage}</p>
-            <button className={imageClass} onClick={completeOrder}>{buttonText}</button>
+            {selectedItems.length> 0 ? <button className={imageClass} onClick={completeOrder}>{buttonText}</button> : null}
             <button className={imageClass === "img"? "hidden" : "img"} 
             onClick={takeOrder}>{btnText}</button>
-        </> }
+        
         </div>
         </>
     )

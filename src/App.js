@@ -7,7 +7,7 @@ import TraditionalPets from "./components/pages/traditionalPets"
 import ExoticPets from "./components/pages/exoticPets"
 import ShoppingList from "./components/pages/shoppingList"
 import Footer from "./components/footer"
-import Pet from './components/pages/Pet.js'
+import Pet from './components/Pet'
 
 import {Switch, Route} from "react-router-dom"
 
