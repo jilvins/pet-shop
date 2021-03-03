@@ -33,35 +33,35 @@
     },
     {
         "id": "5",
-        "name": "Dog",
+        "name": "Grey Dog",
         "type": "simple",
         "price": 10,
-        "picture": "picturesTrad/puppy-1903313_640.jpg",
-        "description": "Loyal dog"
+        "picture": "picturesTrad/dog-2.jpg",
+        "description": "Just as good dog"
     },
     {
         "id": "6",
-        "name": "Cat",
+        "name": "Grey Cat",
         "type": "simple",
         "price": 8,
-        "picture": "picturesTrad/cat-551554_640.jpg",
-        "description": "Cute cat"
+        "picture": "picturesTrad/cat-2.jpg",
+        "description": "Other kind of cat"
     },
     {
         "id": "7",
-        "name": "Hamster",
+        "name": "Rabbit",
         "type": "simple",
         "price": 4,
-        "picture": "picturesTrad/hamster-1772742_640.jpg",
-        "description": "Small hamster"
+        "picture": "picturesTrad/rabbit-373691_1280.jpg",
+        "description": "Small rabbit"
     },
     {
         "id": "8",
-        "name": "Fish",
+        "name": "Red Fish",
         "type": "simple",
         "price": 2,
-        "picture": "picturesTrad/fairy-wrasse-3975299_640.jpg",
-        "description": "Shining fish"
+        "picture": "picturesTrad/fish-2.jpg",
+        "description": "Wild fish"
     },
     {
         "id": "9",

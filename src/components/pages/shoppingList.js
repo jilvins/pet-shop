@@ -32,7 +32,7 @@ function takeOrder () {
     return (
         <>
         <div className="main">
-            {selectedItems.length === 0 ? "You have not ordered anything yet" :
+            {selectedItems.length === 0 ? null :
            <> <h2>Your selected pet list</h2>
             <div className="cartGallery">
             {selectedPetList}

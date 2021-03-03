@@ -1,6 +1,5 @@
 import React from "react"
 import './App.css';
-import Header from "./components/Header"
 import Navbar from "./components/navBar"
 import InfoPage from "./components/pages/infoPage"
 import TraditionalPets from "./components/pages/traditionalPets"
@@ -14,7 +13,6 @@ import {Switch, Route} from "react-router-dom"
 function App() {
   return (
     <div className="App">
-      <Header />
       <Navbar />
       <div id="main-content">
       <Switch>
