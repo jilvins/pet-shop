@@ -178,13 +178,56 @@ button {
 .single-petImg{
   max-width: 30%;
   margin: 20px;
+  
 }
 .page-logo{
   font-family: "Pacifico";
   margin-right: 400px;
   padding: 5px;
   border: 3px solid #BED558;
+}
+@media only screen and (max-width: 1200px) {
+  .navbar{
+    flex-wrap: nowrap;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .page-logo{
+    margin-right: 200px;
+    font-size: 18px;
+  }
+  .navbar{
+    flex-wrap: nowrap;
+    gap: 0.5em;
+  }
+}
+@media only screen and (max-width: 800px) {
+  .single-pet-container{
+    flex-direction: column;
+}
+  .single-petImg{
+    max-width: 40%;
+    margin: 1em auto;
+  }
+}
 
+@media only screen and (max-width: 600px) {
+  .page-logo {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+  .navbar {
+    
+    flex-wrap:nowrap;
+    gap: 0.2em;
+  }
+  .single-pet-container{
+    flex-direction: column;
+}
+  .single-petImg{
+    max-width: 60%;
+    margin: 1em auto;
+  }
 }
 .shopping-cart{
   font-family: "Alfa Slab One";

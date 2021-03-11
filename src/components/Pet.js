@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react'
 import {Context} from "../appContext"
 import {useHistory} from 'react-router-dom'
+import '../App.css'
 
 function Pet () {
     const {addToCart, selectedItems, allPets, singlePet} = useContext(Context)
